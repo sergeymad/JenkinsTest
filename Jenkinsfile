@@ -15,10 +15,10 @@ pipeline {
             steps {
                 echo "----------Start build---------"
                 sh '''
-                   ssh -i /var/lib/jenkins/.ssh/id_rsa root@206.81.18.96 "cd /var/www/dev/testjenkins/ && git checkout -f ${GIT_BRANCH} && git pull"
+                   "git checkout -f ${GIT_BRANCH} && git pull"
                 '''
                 echo "----------check git branch---------"
-
+                    "npm i && npm run build && npm run start"
                 echo "----------End build---------"
             }
         }
