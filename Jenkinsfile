@@ -14,6 +14,9 @@ pipeline {
             }
             steps {
                 echo "----------Start build---------"
+                    sh '''
+                                   "ls"
+                                '''
                 sh '''
                    "cd /Users/serhiimedvinskyi/PhpstormProjects/JenkinsTest && git checkout -f ${GIT_BRANCH} && git pull"
                 '''
