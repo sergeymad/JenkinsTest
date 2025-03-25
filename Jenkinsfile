@@ -18,7 +18,9 @@ pipeline {
                    "git checkout -f ${GIT_BRANCH} && git pull"
                 '''
                 echo "----------check git branch---------"
+                  sh '''
                     "npm i && npm run build && npm run start"
+                     '''
                 echo "----------End build---------"
             }
         }
