@@ -14,9 +14,12 @@ pipeline {
             }
             steps {
                 echo "----------Start build---------"
-
+                sh '''
+                   "cd /Users/serhiimedvinskyi/PhpstormProjects/JenkinsTest && git checkout -f ${GIT_BRANCH} && git pull"
+                '''
+                echo "----------check git branch---------"
                   sh '''
-                    "npm i && npm run build && npm run start"
+                    "cd /Users/serhiimedvinskyi/PhpstormProjects/JenkinsTest && npm i && npm run build && npm run start"
                      '''
                 echo "----------End build---------"
             }
