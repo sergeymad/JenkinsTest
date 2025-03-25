@@ -14,10 +14,7 @@ pipeline {
             }
             steps {
                 echo "----------Start build---------"
-                sh '''
-                   "/usr/bin/git checkout -f ${GIT_BRANCH} && /usr/bin/git pull"
-                '''
-                echo "----------check git branch---------"
+
                   sh '''
                     "npm i && npm run build && npm run start"
                      '''
