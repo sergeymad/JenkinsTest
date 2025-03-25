@@ -15,7 +15,7 @@ pipeline {
             steps {
                 echo "----------Start build---------"
                 sh '''
-                   "git checkout -f ${GIT_BRANCH} && git pull"
+                   "/usr/bin/git checkout -f ${GIT_BRANCH} && /usr/bin/git pull"
                 '''
                 echo "----------check git branch---------"
                   sh '''
