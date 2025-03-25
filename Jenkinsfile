@@ -18,11 +18,11 @@ pipeline {
                                    "ls"
                                 '''
                 sh '''
-                   "cd /Users/serhiimedvinskyi/PhpstormProjects/JenkinsTest && git checkout -f ${GIT_BRANCH} && git pull"
+                   "git checkout -f ${GIT_BRANCH} && git pull"
                 '''
                 echo "----------check git branch---------"
                   sh '''
-                    "cd /Users/serhiimedvinskyi/PhpstormProjects/JenkinsTest && npm i && npm run build && npm run start"
+                    "npm i && npm run build && npm run start"
                      '''
                 echo "----------End build---------"
             }
